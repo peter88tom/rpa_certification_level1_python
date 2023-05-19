@@ -1,15 +1,7 @@
-# Template: Python - Minimal
 
-Get started with just Python.
+# Project Description
 
-This template robot:
+Robot to enter weekly sales data into the RobotSpareBin Industries Intranet using pure Python and Selineum
 
-- Uses only Python.
-  - No need to fuzz in setting up Python versions and no need to run `pip installs`
-  - Control your environment in [conda.yaml](https://github.com/robocorp/template-python/blob/master/conda.yaml)
-- Provides a simple template to start from (`task.py`).
+[Link to this chapter](https://robocorp.com/docs/courses/beginners-course/python-robot)
 
-## Learning materials
-
-- [Python basics](https://robocorp.com/docs/languages-and-frameworks/python)
-- [Best practices in creating Python robots](https://robocorp.com/docs/development-guide/qa-and-best-practices/python-robots)
