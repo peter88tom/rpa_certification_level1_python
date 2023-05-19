@@ -1,6 +1,7 @@
 from RPA.Browser.Selenium import Selenium
 from RPA.HTTP import HTTP
 from RPA.Excel.Files import Files
+from RPA.PDF import PDF
 
 import time
 import os
@@ -74,11 +75,19 @@ def collect_the_results():
 
 
 def export_the_table_as_pdf():
-    pass
+    """ Convert the table listing all sales info to a PDF """
+    time.sleep(5)
+    sales_result_html = browser.find_element("css:div#sales-results")
+
+    pdf = PDF()
+    pdf.html_to_pdf(sales_result_html.get_attribute(
+        "outerHTML"), "output/sales_results.pdf")
 
 
 def log_out():
-    pass
+    """ Log out """
+    logout_button = browser.find_element("//button[@id='logout']")
+    browser.click_button(logout_button)
 
 
 def main():
@@ -89,6 +98,7 @@ def main():
         fill_the_form_using_the_data_from_the_excel_file()
         collect_the_results()
         export_the_table_as_pdf()
+        log_out()
     finally:
         browser.close_browser()
 
