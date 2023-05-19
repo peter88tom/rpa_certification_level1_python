@@ -26,7 +26,7 @@ def log_in():
 
 
 def download_the_excel_file():
-    """ Down load Excel file from remote server """
+    """ Download Excel file from remote server """
     http = HTTP()
     http.download(
         url="https://robotsparebinindustries.com/SalesData.xlsx", overwrite=True)
