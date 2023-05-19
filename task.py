@@ -1,4 +1,5 @@
 from RPA.Browser.Selenium import Selenium
+from RPA.HTTP import HTTP
 import time
 
 browser = Selenium()
@@ -23,11 +24,12 @@ def log_in():
     login_button = browser.find_element("//button[@type='submit']")
     browser.click_button(login_button)
 
-    time.sleep(10)
-
 
 def download_the_excel_file():
-    pass
+    """ Down load Excel file from remote server """
+    http = HTTP()
+    http.download(
+        url="https://robotsparebinindustries.com/SalesData.xlsx", overwrite=True)
 
 
 def fill_and_submit_the_form_for_one_person():
